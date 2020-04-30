@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/worlds/TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/enemy/area2D_enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/enemy/rigid_body_enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/worlds/GameScene.gd" type="Script" id=5]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+fog_enabled = true
+ss_reflections_enabled = true
+dof_blur_near_distance = 1.48
+glow_enabled = true
+glow_intensity = 8.0
+glow_hdr_threshold = 0.12
+glow_bicubic_upscale = true
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -65526, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, 1, 0, 0, 2, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65557, 0, 0, 65558, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131094, 0, 0, 131095, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196631, 0, 0, 327679, 0, 0, 262144, 0, 0, 262168, 0, 0, 262169, 0, 0, 393215, 0, 0, 327705, 0, 0, 327706, 0, 0, 458751, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393237, 0, 0, 393238, 0, 0, 393242, 0, 0, 524287, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458773, 0, 0, 458774, 0, 0, 458777, 0, 0, 458778, 0, 0, 589823, 0, 0, 524289, 0, 0, 524290, 0, 0, 524309, 0, 0, 524310, 0, 0, 524313, 0, 0, 655359, 0, 0, 589825, 0, 0, 589826, 0, 0, 589849, 0, 0, 720895, 0, 0, 655385, 0, 0, 786431, 0, 0, 720922, 0, 0, 851967, 0, 0, 786458, 0, 0, 917503, 0, 0, 851994, 0, 0, 983039, 0, 0, 917530, 0, 0, 917531, 0, 0, 1048575, 0, 0, 983066, 0, 0, 1114111, 0, 0, 1048598, 0, 0, 1048602, 0, 0, 1114112, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114138, 0, 0, 1179649, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245209, 0, 0, 1310724, 0, 0, 1310725, 0, 0, 1310744, 0, 0, 1310745, 0, 0, 1376261, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1376278, 0, 0, 1376279, 0, 0, 1441812, 0, 0, 1441813, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 544, 416 )
+
+[node name="enemy_folder" type="Node" parent="."]
+
+[node name="area2D_enemy" parent="enemy_folder" instance=ExtResource( 3 )]
+position = Vector2( 1207.88, 329.696 )
+
+[node name="area2D_enemy2" parent="enemy_folder" instance=ExtResource( 3 )]
+position = Vector2( 1223.93, 452.262 )
+
+[node name="rigid_body_enemy" parent="enemy_folder" instance=ExtResource( 4 )]
+position = Vector2( 338.539, 927.006 )
+
+[node name="rigid_body_enemy2" parent="enemy_folder" instance=ExtResource( 4 )]
+position = Vector2( 211.781, 910.264 )
+
+[node name="enemy_makeer_timer" type="Timer" parent="."]
+autostart = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="score_label" type="Label" parent="."]
+margin_left = 526.776
+margin_top = 323.682
+margin_right = 566.776
+margin_bottom = 337.682
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="enemy_makeer_timer" to="." method="_on_enemy_makeer_timer_timeout"]
