@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://moving shape NO COLL.gd" type="Script" id=1]
+
+[node name="Polygon2D" type="Polygon2D"]
+modulate = Color( 0.258824, 0.737255, 0.290196, 0.192157 )
+polygon = PoolVector2Array( 31, 91, 42, 170, 210, 207, 335, 125, 184.47, 34.164 )
+script = ExtResource( 1 )

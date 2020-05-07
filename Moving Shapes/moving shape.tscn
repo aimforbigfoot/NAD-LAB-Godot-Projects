@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://moving shape.gd" type="Script" id=1]
+
+[node name="moving shape" type="StaticBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PoolVector2Array( 71.2177, 211.201, 100, 512, 503, 498, 1062, 316, 1017, 43, 772.22, 239.6, 380.004, 337.661 )
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D"]
+show_behind_parent = true
