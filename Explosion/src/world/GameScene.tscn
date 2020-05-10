@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/blocks/StaticBody2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/blocks/RigidBody2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/blocks/wall_static.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/world/GameScene.gd" type="Script" id=4]
+[ext_resource path="res://src/blocks/negative_rigid.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/explosion_maker/Explosion_particles.tscn" type="PackedScene" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 15.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 50.0
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="rigids" type="Node" parent="."]
+
+[node name="RigidBody2D" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 149.147, 458.549 )
+
+[node name="RigidBody2D2" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 688.609, 326.483 )
+
+[node name="RigidBody2D3" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 643.183, 448.029 )
+
+[node name="RigidBody2D4" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 510.587, 366.998 )
+
+[node name="RigidBody2D5" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 498.31, 472.583 )
+
+[node name="RigidBody2D6" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 716.847, 212.303 )
+
+[node name="RigidBody2D7" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 381.674, 219.669 )
+
+[node name="RigidBody2D8" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 575.657, 214.758 )
+
+[node name="RigidBody2D9" parent="rigids" instance=ExtResource( 2 )]
+position = Vector2( 409.912, 338.76 )
+
+[node name="negative_rigid" parent="rigids" instance=ExtResource( 5 )]
+position = Vector2( 246, 160 )
+
+[node name="negative_rigid2" parent="rigids" instance=ExtResource( 5 )]
+position = Vector2( 285, 282 )
+
+[node name="statics" type="Node" parent="."]
+
+[node name="floor" parent="statics" instance=ExtResource( 1 )]
+position = Vector2( 528.197, 532.527 )
+
+[node name="roof" parent="statics" instance=ExtResource( 1 )]
+position = Vector2( 494.711, 50.89 )
+
+[node name="wall_static" parent="statics" instance=ExtResource( 3 )]
+position = Vector2( 77.5414, 298.368 )
+
+[node name="wall_static2" parent="statics" instance=ExtResource( 3 )]
+position = Vector2( 913.107, 296.131 )
+
+[node name="Explosion_particles" parent="." instance=ExtResource( 6 )]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 0, 0 )
+
+[node name="debug" type="Node2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="debug"]
+modulate = Color( 0, 0, 0, 1 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="debug"]
+shape = SubResource( 2 )

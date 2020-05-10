@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/blocks/RigidBody2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/blocks/negative_rigid.gd" type="Script" id=2]
+
+[node name="negative_rigid" instance=ExtResource( 1 )]
+modulate = Color( 1, 0, 0, 1 )
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 0.419608, 0.505882, 0.509804, 1 )
