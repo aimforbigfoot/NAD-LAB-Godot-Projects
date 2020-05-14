@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Moles/GodotMole.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://src/GameScene/GodotMoleHouse.gd" type="Script" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "icon.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "icon.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+
+[node name="GameScene" type="Node2D"]
+
+[node name="GodotMoleHouse" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="GodotMole4" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 160, 160 )
+z_index = -1
+
+[node name="GodotMole5" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 320, 160 )
+z_index = -1
+
+[node name="GodotMole6" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 480, 160 )
+z_index = -1
+
+[node name="GodotMole8" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 160, 352 )
+z_index = -1
+
+[node name="GodotMole9" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 320, 352 )
+z_index = -1
+
+[node name="GodotMole3" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 480, 352 )
+z_index = -1
+
+[node name="GodotMole11" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 160, 544 )
+z_index = -1
+
+[node name="GodotMole10" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 320, 544 )
+z_index = -1
+
+[node name="GodotMole7" parent="GodotMoleHouse" instance=ExtResource( 1 )]
+position = Vector2( 480, 544 )
+z_index = -1
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.180392, 0.180392, 0.180392, 1 )
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 65536, 0, 0, 65537, 0, 0, 65544, 0, 0, 65545, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 262144, 0, 0, 262145, 0, 0, 262152, 0, 0, 262153, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 393216, -1610612736, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 458752, 0, 0, 458753, 0, 0, 458760, 0, 0, 458761, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 71.0
+margin_bottom = 38.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Score:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
