@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/card/Card.tscn" type="PackedScene" id=1]
+
+[node name="MainCardScene" type="Node2D"]
+
+[node name="CardHolder" type="Node" parent="."]
+
+[node name="Card" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 193.04, 560 )
+dur = 5.0
+
+[node name="Card2" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 314.755, 560 )
+
+[node name="Card3" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 470.588, 560 )
+dur = 0.25
+
+[node name="Card4" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 606.575, 560 )
+
+[node name="Card5" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 752.076, 560 )
+dur = 2.0
+
+[node name="Card6" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 888.933, 560 )

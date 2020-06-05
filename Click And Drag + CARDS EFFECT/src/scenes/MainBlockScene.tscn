@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/block/Block.gd" type="Script" id=1]
+[ext_resource path="res://src/block/Block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 40.8289
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50.5525, 25.539 )
+
+[node name="MainBlockScene" type="Node2D"]
+
+[node name="block_holder" type="Node" parent="."]
+
+[node name="Block" parent="block_holder" instance=ExtResource( 2 )]
+position = Vector2( 199, 95 )
+
+[node name="Block2Cic" type="Area2D" parent="block_holder"]
+position = Vector2( 712, 102 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="block_holder/Block2Cic"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block_holder/Block2Cic"]
+shape = SubResource( 1 )
+
+[node name="Block3Rect" type="Area2D" parent="block_holder"]
+position = Vector2( 887, 455 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="block_holder/Block3Rect"]
+scale = Vector2( 1.59, 0.777778 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block_holder/Block3Rect"]
+shape = SubResource( 2 )
+
+[node name="Block4" parent="block_holder" instance=ExtResource( 2 )]
+position = Vector2( 76, 447 )
+
+[node name="Block5" parent="block_holder" instance=ExtResource( 2 )]
+position = Vector2( 494.737, 307.053 )
+[connection signal="mouse_entered" from="block_holder/Block2Cic" to="block_holder/Block2Cic" method="_on_Block_mouse_entered"]
+[connection signal="mouse_exited" from="block_holder/Block2Cic" to="block_holder/Block2Cic" method="_on_Block_mouse_exited"]
+[connection signal="mouse_entered" from="block_holder/Block3Rect" to="block_holder/Block3Rect" method="_on_Block_mouse_entered"]
+[connection signal="mouse_exited" from="block_holder/Block3Rect" to="block_holder/Block3Rect" method="_on_Block_mouse_exited"]
