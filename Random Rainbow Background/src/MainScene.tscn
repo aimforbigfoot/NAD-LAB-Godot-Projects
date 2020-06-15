@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/MainScene.gd" type="Script" id=2]
+[ext_resource path="res://src/rainbow_back.tscn" type="PackedScene" id=4]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="back" parent="." instance=ExtResource( 4 )]
+position = Vector2( 511.911, 301.061 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 433.241, 234.903 )
+texture = ExtResource( 1 )
