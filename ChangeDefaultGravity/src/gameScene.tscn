@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/staticBod.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/KinematicBody2D.tscn" type="PackedScene" id=3]
+
+[node name="gameScene" type="Node2D"]
+
+[node name="staticBodies" type="Node" parent="."]
+
+[node name="staticBod" parent="staticBodies" instance=ExtResource( 1 )]
+position = Vector2( 520, 592 )
+
+[node name="staticBod2" parent="staticBodies" instance=ExtResource( 1 )]
+position = Vector2( 520, -24 )
+
+[node name="staticBod3" parent="staticBodies" instance=ExtResource( 1 )]
+position = Vector2( 0, 280 )
+rotation = 1.5708
+
+[node name="staticBod4" parent="staticBodies" instance=ExtResource( 1 )]
+position = Vector2( 1024, 280 )
+rotation = 1.5708
+
+[node name="ballBodies" type="Node" parent="."]
+
+[node name="ball" parent="ballBodies" instance=ExtResource( 2 )]
+position = Vector2( 288, 320 )
+
+[node name="ball2" parent="ballBodies" instance=ExtResource( 2 )]
+position = Vector2( 464, 256 )
+
+[node name="ball3" parent="ballBodies" instance=ExtResource( 2 )]
+position = Vector2( 688, 352 )
+
+[node name="ball4" parent="ballBodies" instance=ExtResource( 2 )]
+position = Vector2( 512, 440 )
+
+[node name="ball5" parent="ballBodies" instance=ExtResource( 2 )]
+position = Vector2( 760, 496 )
+
+[node name="ball6" parent="ballBodies" instance=ExtResource( 2 )]
+position = Vector2( 760, 496 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 152, 104 )

@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/biglabel.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/gameScene.gd" type="Script" id=2]
+
+[node name="gameScene" type="Node2D"]
+position = Vector2( 1.05945, -2.11893 )
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 160.0
+margin_right = 1024.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 1024, 0 )
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 1 )
+text = "Hello World"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 64.0
+margin_right = 1024.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 1024, 64 )
+custom_constants/separation = 115
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Increase" type="Button" parent="HBoxContainer"]
+margin_right = 454.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+text = "Increase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Decrease" type="Button" parent="HBoxContainer"]
+margin_left = 569.0
+margin_right = 1024.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+text = "Decrease"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="HBoxContainer/Increase" to="." method="_on_Increase_pressed"]
+[connection signal="pressed" from="HBoxContainer/Decrease" to="." method="_on_Decrease_pressed"]
