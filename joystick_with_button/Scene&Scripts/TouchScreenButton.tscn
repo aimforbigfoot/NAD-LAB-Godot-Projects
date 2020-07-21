@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://icon-me.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scene&Scripts/TouchScreenButton.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[node name="TouchScreenButton" type="TouchScreenButton"]
+scale = Vector2( 4, 4 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 1 )
+shape = SubResource( 1 )
+script = ExtResource( 3 )
+[connection signal="pressed" from="." to="." method="_on_TouchScreenButton_pressed"]
