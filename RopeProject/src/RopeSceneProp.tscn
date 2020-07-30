@@ -1,0 +1,120 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/RopeBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/RopeScene.gd" type="Script" id=2]
+[ext_resource path="res://src/PinJoint2D.tscn" type="PackedScene" id=3]
+
+[node name="RopeScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="RopeBase" parent="." instance=ExtResource( 1 )]
+
+[node name="PinJoint2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 16 )
+
+[node name="RopeBase2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 32 )
+
+[node name="PinJoint2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 48 )
+
+[node name="RopeBase3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 64 )
+
+[node name="PinJoint2D19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 80 )
+
+[node name="RopeBase4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 96 )
+
+[node name="PinJoint2D20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 112 )
+
+[node name="RopeBase5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 128 )
+
+[node name="PinJoint2D21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 144 )
+
+[node name="RopeBase6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 160 )
+
+[node name="PinJoint2D22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4.35456, 184.147 )
+
+[node name="RopeBase7" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7.62939e-06, 196.653 )
+
+[node name="PinJoint2D23" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1.25774, 213.331 )
+
+[node name="RopeBase8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.840889, 229.868 )
+
+[node name="PinJoint2D24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3.79333, 245.882 )
+
+[node name="RopeBase9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.840889, 261.822 )
+
+[node name="PinJoint2D25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2.67086, 273.943 )
+
+[node name="RopeBase10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.840889, 293.356 )
+
+[node name="PinJoint2D26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2.67086, 309.862 )
+
+[node name="RopeBase11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.34089, 324.356 )
+
+[node name="PinJoint2D27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.987176, 338.485 )
+
+[node name="RopeBase12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3.12267, 352.865 )
+
+[node name="PinJoint2D28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.987176, 367.669 )
+
+[node name="RopeBase13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.00454044, 382.71 )
+
+[node name="PinJoint2D29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.425942, 396.292 )
+
+[node name="RopeBase14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.00454044, 413.446 )
+
+[node name="PinJoint2D30" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.987176, 422.67 )
+
+[node name="RopeBase15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.89544, 443.737 )
+
+[node name="PinJoint2D31" parent="." instance=ExtResource( 3 )]
+position = Vector2( -0.696517, 457.466 )
+
+[node name="RopeBase16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.95489, 474.461 )
+
+[node name="PinJoint2D32" parent="." instance=ExtResource( 3 )]
+position = Vector2( -2.94144, 490.579 )
+
+[node name="RopeBase17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2.48461, 507.834 )
+
+[node name="PinJoint2D33" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.425926, 520.885 )
+
+[node name="RopeBase18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2.48461, 539.088 )
+
+[node name="PinJoint2D34" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.425926, 551.753 )
+node_a = NodePath("../RopeBase18")
+node_b = NodePath("../RopeBase19")
+
+[node name="RopeBase19" parent="." instance=ExtResource( 1 )]
+position = Vector2( -0.164054, 567.164 )

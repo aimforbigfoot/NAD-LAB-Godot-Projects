@@ -1,0 +1,5 @@
+[gd_scene format=2]
+
+[node name="PinJoint2D" type="PinJoint2D"]
+node_a = NodePath("../RopeBase")
+node_b = NodePath("../RopeBase2")
