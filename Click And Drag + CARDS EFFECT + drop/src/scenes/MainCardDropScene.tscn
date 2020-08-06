@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/cardDrop/CardDrop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/cardDrop/place/place.tscn" type="PackedScene" id=2]
+
+[node name="MainCardScene" type="Node2D"]
+
+[node name="DropScene" type="Node" parent="."]
+
+[node name="place" parent="DropScene" instance=ExtResource( 2 )]
+position = Vector2( 288.651, 247.67 )
+
+[node name="place2" parent="DropScene" instance=ExtResource( 2 )]
+position = Vector2( 506.276, 236.967 )
+
+[node name="place3" parent="DropScene" instance=ExtResource( 2 )]
+position = Vector2( 923.688, 424.862 )
+
+[node name="CardHolder" type="Node" parent="."]
+
+[node name="CardDrop" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 85.6229, 148.651 )
+
+[node name="CardDrop2" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 404.33, 72.5416 )
+
+[node name="CardDrop3" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 774.174, 143.894 )
+
+[node name="CardDrop4" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 744.444, 400.763 )
+
+[node name="CardDrop5" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 317.518, 489.953 )
+
+[node name="CardDrop6" parent="CardHolder" instance=ExtResource( 1 )]
+position = Vector2( 145.083, 451.899 )
