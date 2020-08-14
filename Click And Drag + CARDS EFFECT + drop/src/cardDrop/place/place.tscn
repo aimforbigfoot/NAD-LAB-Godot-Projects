@@ -8,6 +8,7 @@ extents = Vector2( 72, 112 )
 [node name="place" type="Area2D" groups=[
 "place",
 ]]
+z_index = -50
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.576471, 0.254902, 0.254902, 1 )

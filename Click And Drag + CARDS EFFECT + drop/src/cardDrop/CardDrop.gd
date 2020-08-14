@@ -8,15 +8,15 @@ onready var tween := $Tween
 export var dur := 0.3
 export var mar := 30
 
-
 var pos := Vector2.ZERO
+
 
 func _ready() -> void:
 	randomize()
 	pos = global_position
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if followable:
 		global_position = (get_global_mouse_position() - diff) 
 	if in_place and Input.is_action_just_released("click"):
@@ -36,6 +36,7 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_Card_mouse_entered() -> void:
+#	z_index += 1
 	mouse_in = true
 	diff = (get_global_mouse_position() - global_position)
 	for blocks in get_parent().get_children():
@@ -43,6 +44,7 @@ func _on_Card_mouse_entered() -> void:
 			continue
 		elif blocks.mouse_in == true:
 			blocks.mouse_in = false
+#		z_index -= 1
 
 
 func _on_Card_mouse_exited() -> void:

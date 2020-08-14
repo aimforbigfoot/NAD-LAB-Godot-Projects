@@ -16,7 +16,7 @@ position = Vector2( 506.276, 236.967 )
 [node name="place3" parent="DropScene" instance=ExtResource( 2 )]
 position = Vector2( 923.688, 424.862 )
 
-[node name="CardHolder" type="Node" parent="."]
+[node name="CardHolder" type="Node2D" parent="."]
 
 [node name="CardDrop" parent="CardHolder" instance=ExtResource( 1 )]
 position = Vector2( 85.6229, 148.651 )
