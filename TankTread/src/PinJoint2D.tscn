@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="PinJoint2D" type="PinJoint2D"]
+bias = 0.9

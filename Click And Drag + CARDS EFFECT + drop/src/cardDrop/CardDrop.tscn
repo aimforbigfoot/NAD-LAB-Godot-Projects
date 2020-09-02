@@ -19,5 +19,6 @@ shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
 [connection signal="area_entered" from="." to="." method="_on_Card_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_CardDrop_area_exited"]
 [connection signal="mouse_entered" from="." to="." method="_on_Card_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Card_mouse_exited"]

@@ -58,7 +58,11 @@ func _on_Card_area_entered(area: Area2D) -> void:
 		reset_pos(area)
 
 
+func _on_CardDrop_area_exited(area: Area2D) -> void:
+	pass # Replace with function body.
+
 func reset_pos(area:Area2D):
 	in_place = true
 	pos = area.global_position+Vector2(rand_range(-mar,mar),rand_range(-mar,mar))
 	pass
+

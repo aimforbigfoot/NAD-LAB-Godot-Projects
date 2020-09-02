@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Rope.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/wheel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/mouse.tscn" type="PackedScene" id=6]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="Floor2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8.53111, 320.199 )
+rotation = 1.5708
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+position = Vector2( 502, 579 )
+
+[node name="Floor3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1551.05, 642.37 )
+rotation = 0.00184164
+
+[node name="Floor4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2040.21, 216.961 )
+rotation = -1.56895
+
+[node name="Rope" parent="." instance=ExtResource( 2 )]
+position = Vector2( 351, 79 )
+rotation = 1.56978
+
+[node name="wheel2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 347.903, 110.88 )
+
+[node name="wheel3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 264.747, 110.131 )
+
+[node name="mouse" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 171.349, 30.2381 )
