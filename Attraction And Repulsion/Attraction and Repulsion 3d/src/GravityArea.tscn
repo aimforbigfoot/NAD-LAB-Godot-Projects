@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 10, 10, 10 )
+
+[node name="GravityArea" type="Area"]
+space_override = 1
+gravity_point = true
+gravity = 25.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )

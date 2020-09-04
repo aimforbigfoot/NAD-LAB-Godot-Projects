@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/attractor.tscn" type="PackedScene" id=2]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="ballHolder" type="Node2D" parent="."]
+
+[node name="ball" parent="ballHolder" instance=ExtResource( 1 )]
+position = Vector2( 292.215, 126.508 )
+
+[node name="ball2" parent="ballHolder" instance=ExtResource( 1 )]
+position = Vector2( 187.089, 272.615 )
+
+[node name="ball3" parent="ballHolder" instance=ExtResource( 1 )]
+position = Vector2( 908.717, 67.7084 )
+
+[node name="ball4" parent="ballHolder" instance=ExtResource( 1 )]
+position = Vector2( 917.625, 400.904 )
+
+[node name="ball5" parent="ballHolder" instance=ExtResource( 1 )]
+position = Vector2( 411.595, 570.175 )
+
+[node name="ball6" parent="ballHolder" instance=ExtResource( 1 )]
+position = Vector2( 604.029, 249.452 )
+
+[node name="ball7" parent="ballHolder" instance=ExtResource( 1 )]
+position = Vector2( 235.197, 479.304 )
+
+[node name="attractor" parent="." instance=ExtResource( 2 )]
