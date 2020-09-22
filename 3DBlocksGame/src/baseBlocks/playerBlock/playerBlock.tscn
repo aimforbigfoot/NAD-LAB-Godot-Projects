@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/baseBlocks/playerBlock/playerBlock.gd" type="Script" id=1]
+[ext_resource path="res://assets/planks/old_planks_02_diff_2k.png" type="Texture" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.929412, 0.27451, 0.27451, 1 )
+albedo_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 1.0
+
+[node name="playerBlock" type="KinematicBody"]
+collision/safe_margin = 0.04
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
