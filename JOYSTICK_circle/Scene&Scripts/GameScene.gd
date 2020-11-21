@@ -18,3 +18,4 @@ func values_between_frontandback() -> Vector2:
 	var vec : Vector2 = front.global_position - back.global_position
 	return vec
 
+
