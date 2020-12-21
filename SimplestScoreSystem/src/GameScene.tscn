@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Kenney Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/GameScene.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 1 )
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Tree" type="Tree" parent="."]
+margin_right = 194.0
+margin_bottom = 175.0
+columns = 2
+allow_rmb_select = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tree"]
+margin_left = 25.7137
+margin_top = 20.252
+margin_right = 369.714
+margin_bottom = 116.252
+custom_fonts/font = SubResource( 2 )
+text = "Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Tree"]
+margin_left = 6.01065
+margin_top = 120.633
+margin_right = 210.011
+margin_bottom = 222.633
+custom_fonts/font = SubResource( 1 )
+text = "Add"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="tree_exiting" from="." to="." method="_on_GameScene_tree_exiting"]
+[connection signal="pressed" from="Tree/Button" to="." method="_on_Button_pressed"]
