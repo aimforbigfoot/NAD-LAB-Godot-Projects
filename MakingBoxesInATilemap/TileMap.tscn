@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TileMap.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://orange4.png" type="Texture" id=3]
+
+[sub_resource type="TileSet" id=1]
+0/name = "icon.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 52, 8, 4, 4 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "orange4.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 4, 4 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 4, 4 )
+format = 1
+tile_data = PoolIntArray( 9568510, 0, 0, 9568511, 0, 0, 9634039, 0, 0, 9634040, 0, 0, 9634041, 0, 0, 9634042, 0, 0, 9634043, 0, 0, 9634044, 0, 0, 9634045, 0, 0, 9634046, 0, 0, 9634047, 0, 0, 9634048, 0, 0, 9634049, 0, 0, 9699573, 0, 0, 9699574, 0, 0, 9699575, 0, 0, 9699576, 0, 0, 9699577, 0, 0, 9699578, 0, 0, 9699579, 0, 0, 9699580, 0, 0, 9699581, 0, 0, 9699582, 0, 0, 9699583, 0, 0 )
+script = ExtResource( 1 )
