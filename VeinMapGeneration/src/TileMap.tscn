@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/TileMap.gd" type="Script" id=1]
+[ext_resource path="res://assets/white8.png" type="Texture" id=3]
+[ext_resource path="res://assets/black8.png" type="Texture" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "black8.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 8, 8 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "white8.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 8, 8 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( 65728, 0, 0, 65778, 0, 0, 65779, 0, 0, 65780, 0, 0, 65781, 0, 0, 65782, 0, 0, 65783, 0, 0, 131291, 0, 0, 131309, 0, 0, 131310, 0, 0, 131311, 0, 0, 131312, 0, 0, 131313, 0, 0, 131315, 0, 0, 262383, 0, 0, 8257765, 0, 0, 8323301, 0, 0, 8388837, 0, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 428.833 ],
+"_edit_vertical_guides_": [ 101.081 ]
+}
