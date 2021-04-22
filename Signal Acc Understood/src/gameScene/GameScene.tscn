@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/player/main_player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/gameScene/GameScene.gd" type="Script" id=3]
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="main_player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 253.302, 290.78 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="EnemyFolder" type="Node2D" parent="."]
