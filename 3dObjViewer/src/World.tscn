@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/MeshScene.tscn" type="PackedScene" id=1]
+
+[node name="World" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -18, 31, 35 )
+
+[node name="Label" type="Label" parent="Camera"]
+margin_left = 136.0
+margin_top = 243.0
+margin_right = 451.0
+margin_bottom = 304.0
+text = "Move mouse Around to Move the mesh"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MeshInstance" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0 )
