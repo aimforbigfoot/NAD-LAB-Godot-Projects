@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/wood/Wood062_1K_Roughness.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/wood/Wood062_1K_Normal.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/wood/Wood062_1K_Color.jpg" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.74
+normal_texture = ExtResource( 2 )
+uv1_scale = Vector3( 14.772, 9.672, 2.221 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+flip_faces = true
+size = Vector3( 120, 20, 8 )
+
+[sub_resource type="ConcavePolygonShape" id=3]
+data = PoolVector3Array( 60, 10, 4, -60, 10, 4, -60, -10, 4, 60, -10, 4, 60, 10, 4, -60, -10, 4, -60, 10, -4, 60, 10, -4, 60, -10, -4, -60, -10, -4, -60, 10, -4, 60, -10, -4, 60, 10, -4, 60, 10, 4, 60, -10, 4, 60, -10, -4, 60, 10, -4, 60, -10, 4, -60, 10, 4, -60, 10, -4, -60, -10, -4, -60, -10, 4, -60, 10, 4, -60, -10, -4, -60, 10, 4, 60, 10, 4, 60, 10, -4, -60, 10, -4, -60, 10, 4, 60, 10, -4, 60, -10, 4, -60, -10, 4, -60, -10, -4, 60, -10, -4, 60, -10, 4, -60, -10, -4 )
+
+[node name="Room1" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 3 )

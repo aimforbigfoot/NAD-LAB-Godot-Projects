@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shuflingObjects.wav-61e370110eb681ec3bf478131f088405.sample"
+
+[deps]
+
+source_file="res://assets/shuflingObjects.wav"
+dest_files=[ "res://.import/shuflingObjects.wav-61e370110eb681ec3bf478131f088405.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

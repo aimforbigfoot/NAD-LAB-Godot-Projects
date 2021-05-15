@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/player/player3d.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/world/Room3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/world/World.gd" type="Script" id=3]
+[ext_resource path="res://assets/shuflingObjects.wav" type="AudioStream" id=4]
+
+[sub_resource type="SphereShape" id=1]
+radius = 11.3416
+
+[node name="World" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+
+[node name="switcher" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2908, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="switcher"]
+shape = SubResource( 1 )
+
+[node name="shufllingObjects" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 0, 0 )
+stream = ExtResource( 4 )
+unit_db = 20.0
+
+[node name="Room3" parent="." instance=ExtResource( 2 )]
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24664, 0, 0 )
+light_color = Color( 1, 0, 0, 1 )
+shadow_enabled = true
+
+[connection signal="body_entered" from="switcher" to="." method="_on_switcher_body_entered"]
