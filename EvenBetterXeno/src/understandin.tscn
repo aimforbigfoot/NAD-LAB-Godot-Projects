@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/arrow.tres" type="ArrayMesh" id=1]
+[ext_resource path="res://src/understandin.gd" type="Script" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0, 0.937255, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 1, 0.678431, 0, 1 )
+
+[node name="understandin" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="purple" type="Position3D" parent="."]
+transform = Transform( 0.804728, -0.593644, 0, 0.593644, 0.804728, 0, 0, 0, 1, 0, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="purple"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
+material_override = SubResource( 1 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="orange" type="Position3D" parent="."]
+visible = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Position3D2" type="Position3D" parent="orange"]
+
+[node name="MeshInstance2" type="MeshInstance" parent="orange/Position3D2"]
+transform = Transform( 1, 0, 0, 0, -2.98023e-08, 1, 0, -1, -2.98023e-08, 0, -1.19209e-07, -3 )
+material_override = SubResource( 2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Position3D3" type="Position3D" parent="orange"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="orange/Position3D3"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, -8.88178e-16, -1, -4.37114e-08, -3.55271e-15, 3.55271e-15, -3 )
+material_override = SubResource( 2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="orange" type="Position3D" parent="orange"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12032, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.907448, 0.420165, 0, -0.420165, 0.907448, 0, 9.07603, 9.89241 )

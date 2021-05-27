@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Ground045_1K-JPG/groundMat.tres" type="Material" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 50.0
+height = 200.0
+
+[sub_resource type="CylinderMesh" id=2]
+material = ExtResource( 1 )
+top_radius = 50.0
+bottom_radius = 50.0
+height = 200.0
+
+[node name="cylinder" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = null

@@ -1,0 +1,153 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/xeno/xeno.gd" type="Script" id=1]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="SphereShape" id=2]
+radius = 2.1589
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="SphereMesh" id=4]
+
+[node name="xeno" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="head" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="head"]
+current = true
+fov = 100.0
+far = 8192.0
+
+[node name="checkerArea" type="Area" parent="."]
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="checkerArea"]
+shape = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0 )
+current = true
+
+[node name="rayFolder" type="Spatial" parent="."]
+
+[node name="backRay" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, 0, 2 )
+
+[node name="RayCast10" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, 1, 2 )
+
+[node name="RayCast11" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, -1, 2 )
+
+[node name="fowardRay" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, 0, -2 )
+
+[node name="RayCast12" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, 1, -2 )
+
+[node name="RayCast13" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, -1, -2 )
+
+[node name="RayCast4" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 2, 1, 0 )
+
+[node name="rightRay" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 2, 0, 0 )
+
+[node name="RayCast14" type="RayCast" parent="rayFolder"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.144109, -0.0432743, 0.00630093 )
+enabled = true
+cast_to = Vector3( 2, -1, 0 )
+
+[node name="leftRay" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( -2, 0, 0 )
+
+[node name="RayCast16" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( -2, 1, 0 )
+
+[node name="RayCast17" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( -2, -1, 0 )
+
+[node name="RayCast6" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 1, -2, 0 )
+
+[node name="RayCast7" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( -1, -2, 0 )
+
+[node name="RayCast8" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, -2, -1 )
+
+[node name="RayCast9" type="RayCast" parent="rayFolder"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00612783, -1.19209e-07, -0.00177455 )
+enabled = true
+cast_to = Vector3( 0, -2, 1 )
+
+[node name="upRay" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, 2, 0 )
+
+[node name="bottomRay" type="RayCast" parent="rayFolder"]
+enabled = true
+cast_to = Vector3( 0, -2, 0 )
+
+[node name="specialRays" type="Spatial" parent="."]
+
+[node name="backRay" type="RayCast" parent="specialRays"]
+enabled = true
+cast_to = Vector3( 0, 0, 2 )
+
+[node name="fowardRay" type="RayCast" parent="specialRays"]
+enabled = true
+cast_to = Vector3( 0, 0, -2 )
+
+[node name="rightRay" type="RayCast" parent="specialRays"]
+enabled = true
+cast_to = Vector3( 2, 0, 0 )
+
+[node name="leftRay" type="RayCast" parent="specialRays"]
+enabled = true
+cast_to = Vector3( -2, 0, 0 )
+
+[node name="box" type="Spatial" parent="."]
+
+[node name="foward" type="MeshInstance" parent="box"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7 )
+material_override = SubResource( 3 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="back" type="MeshInstance" parent="box"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="left" type="MeshInstance" parent="box"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="right" type="MeshInstance" parent="box"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0 )
+mesh = SubResource( 4 )
+material/0 = null
