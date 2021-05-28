@@ -8,7 +8,7 @@ func _physics_process(delta: float) -> void:
 		var vel : Vector2
 		
 		if index < path.size()-1:
-			vel = path[index+1] - path[index]
+			vel = path[index+1] - position
 			if are_these_close_to_each_other(global_position, path[index+1]):
 				index += 1
 		else:
