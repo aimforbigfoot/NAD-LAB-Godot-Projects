@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/spawner.gd" type="Script" id=1]
+[ext_resource path="res://src/seedsInGodot.gd" type="Script" id=2]
+[ext_resource path="res://src/rngSetter.tscn" type="PackedScene" id=3]
+
+[node name="seedsInGodot" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="rngSetter" parent="." instance=ExtResource( 3 )]
+seedName = "name"
+
+[node name="spawner" type="Node2D" parent="."]
+script = ExtResource( 1 )
