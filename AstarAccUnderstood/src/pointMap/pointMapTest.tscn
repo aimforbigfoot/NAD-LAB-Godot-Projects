@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="pointMapTest" type="Node2D"]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 304, 192 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 576, 464 )
+
+[node name="Position2D3" type="Position2D" parent="."]
+position = Vector2( 800, 192 )
+
+[node name="Position2D4" type="Position2D" parent="."]
+position = Vector2( 824, 448 )
+
+[node name="Position2D5" type="Position2D" parent="."]
+position = Vector2( 560, 160 )
+
+[node name="Position2D6" type="Position2D" parent="."]
+position = Vector2( 280, 456 )

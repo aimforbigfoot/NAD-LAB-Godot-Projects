@@ -1,0 +1,46 @@
+[gd_scene format=2]
+
+[node name="pointMap2" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 304.0, 304.0 ],
+"_edit_vertical_guides_": [ 0.0, 1024.0 ]
+}
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 47.6758, 286.055 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 160, 72 )
+
+[node name="Position2D3" type="Position2D" parent="."]
+position = Vector2( 152, 296 )
+
+[node name="Position2D4" type="Position2D" parent="."]
+position = Vector2( 184, 496 )
+
+[node name="Position2D5" type="Position2D" parent="."]
+position = Vector2( 312, 200 )
+
+[node name="Position2D6" type="Position2D" parent="."]
+position = Vector2( 312, 352 )
+
+[node name="Position2D7" type="Position2D" parent="."]
+position = Vector2( 472, 272 )
+
+[node name="Position2D8" type="Position2D" parent="."]
+position = Vector2( 608, 208 )
+
+[node name="Position2D9" type="Position2D" parent="."]
+position = Vector2( 584, 384 )
+
+[node name="Position2D10" type="Position2D" parent="."]
+position = Vector2( 728, 104 )
+
+[node name="Position2D11" type="Position2D" parent="."]
+position = Vector2( 736, 312 )
+
+[node name="Position2D12" type="Position2D" parent="."]
+position = Vector2( 728, 504 )
+
+[node name="Position2D13" type="Position2D" parent="."]
+position = Vector2( 904, 304 )

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/world/pointMapGenerator.gd" type="Script" id=1]
+[ext_resource path="res://src/commonComps/restartManager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/cruiser/Cruiser.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 312.0 ],
+"_edit_vertical_guides_": [ 0.0 ]
+}
+
+[node name="Cruiser" parent="." instance=ExtResource( 3 )]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+default_color = Color( 1, 0.282353, 0, 1 )
+
+[node name="pointMapGenerator" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="restartManager" parent="." instance=ExtResource( 2 )]

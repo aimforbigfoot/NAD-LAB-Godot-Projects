@@ -1,0 +1,36 @@
+[gd_scene format=2]
+
+[node name="pointMap1" type="Node2D"]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 80, 304 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 256, 152 )
+
+[node name="Position2D3" type="Position2D" parent="."]
+position = Vector2( 248, 320 )
+
+[node name="Position2D4" type="Position2D" parent="."]
+position = Vector2( 248, 480 )
+
+[node name="Position2D5" type="Position2D" parent="."]
+position = Vector2( 496, 504 )
+
+[node name="Position2D6" type="Position2D" parent="."]
+position = Vector2( 504, 320 )
+
+[node name="Position2D7" type="Position2D" parent="."]
+position = Vector2( 512, 128 )
+
+[node name="Position2D8" type="Position2D" parent="."]
+position = Vector2( 784, 144 )
+
+[node name="Position2D9" type="Position2D" parent="."]
+position = Vector2( 744, 336 )
+
+[node name="Position2D10" type="Position2D" parent="."]
+position = Vector2( 752, 472 )
+
+[node name="Position2D11" type="Position2D" parent="."]
+position = Vector2( 968, 328 )
