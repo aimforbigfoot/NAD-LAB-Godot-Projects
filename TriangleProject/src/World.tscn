@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Triangle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/mouse.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="mouse" parent="." instance=ExtResource( 2 )]
+position = Vector2( 65, 42 )
+
+[node name="Triangle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 841, 431 )
+rotation = -0.945876
+
+[node name="Triangle3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 555, 63 )
+rotation = -2.55524
+
+[node name="Position2D" parent="Triangle3" index="0"]
+position = Vector2( 300.356, -158.702 )
+
+[node name="Position2D2" parent="Triangle3" index="1"]
+position = Vector2( -263.812, 199.256 )
+
+[node name="Triangle2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 173, 324 )
+rotation = 1.24092
+
+[node name="Position2D" parent="Triangle2" index="0"]
+position = Vector2( 159.58, 92.6895 )
+
+[node name="Position2D2" parent="Triangle2" index="1"]
+position = Vector2( -76.8841, 82.5459 )
+
+[editable path="Triangle3"]
+[editable path="Triangle2"]
