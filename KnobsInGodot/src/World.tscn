@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Knob.tscn" type="PackedScene" id=1]
+
+[node name="World" type="Node2D"]
+
+[node name="Knob" parent="." instance=ExtResource( 1 )]
+position = Vector2( 221, 311 )
